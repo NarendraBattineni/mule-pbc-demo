@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd"></mule>
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="48650933-6d5a-4f26-a02b-09fd4995a258" >
+		<http:listener-connection host="0.0.0.0" port="${http.port}" />
+	</http:listener-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="637ce5b5-3f27-4402-a5fd-f858250e0eea" file="config.yaml" />
+	<flow name="mule-pbc-demoFlow" doc:id="b94ba18b-a4a1-4c83-afbc-d21fc91b4968" >
+		<http:listener doc:name="Listener" doc:id="a232c0f7-911c-402a-a246-39ebc3312853" config-ref="HTTP_Listener_config" path="/test"/>
+		<set-payload value="Hello PBC" doc:name="Set Payload" doc:id="8c5a76c7-da07-4ef6-83ae-15769b00417c" />
+	</flow>
+</mule>
