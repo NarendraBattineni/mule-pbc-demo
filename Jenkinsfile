@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Unit Test') { 
       steps {
-        bat 'mvn clean test'
+        bat 'mvn clean install'
       }
     }    
     stage('Deploy CloudHub') { 
