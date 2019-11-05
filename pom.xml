@@ -32,7 +32,7 @@
 						<username>${username}</username>
 						<password>${password}</password>
 						<applicationName>${project.artifactId}</applicationName>
-						<environment>Sandbox</environment>
+						<environment>${environment}</environment>
 					</cloudHubDeployment>
 				</configuration>
 				<executions>
