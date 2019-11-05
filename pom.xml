@@ -33,6 +33,7 @@
 						<password>${password}</password>
 						<applicationName>${project.artifactId}</applicationName>
 						<environment>${environment}</environment>
+						<businessGroup>India Solutions Team</businessGroup>
 					</cloudHubDeployment>
 				</configuration>
 				<executions>
