@@ -11,7 +11,7 @@ pipeline {
         ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
       }
       steps {
-        bat 'mvn deploy -Dmule.version=4.2.1 -Dusername=${ANYPOINT_CREDENTIALS_USR} -Dpassword=${ANYPOINT_CREDENTIALS_PSW}  -Denvironment=Sandbox -DmuleDeploy' 
+        bat 'mvn -f pom.xml package deploy -Dmule.version=4.2.1 -Dusername=${ANYPOINT_CREDENTIALS_USR} -Dpassword=${ANYPOINT_CREDENTIALS_PSW}  -Denvironment=Sandbox -DmuleDeploy' 
       }
     }
   }
