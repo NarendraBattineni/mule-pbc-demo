@@ -14,7 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.1.1</app.runtime>
+		<app.runtime>4.2.1</app.runtime>
 		<mule.maven.plugin.version>3.2.1</mule.maven.plugin.version>
 	</properties>
 
@@ -23,7 +23,7 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>1.7</version>
+				<version>3.3.2</version>
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
@@ -32,7 +32,7 @@
 						<username>${username}</username>
 						<password>${password}</password>
 						<applicationName>${project.artifactId}</applicationName>
-						<environment>${environment}</environment>
+						<environment>Sandbox</environment>
 					</cloudHubDeployment>
 				</configuration>
 				<executions>
